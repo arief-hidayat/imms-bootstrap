@@ -1,12 +1,16 @@
 // bootstrap 3.1.1
 // + datetimepicker 3.0.0 https://github.com/Eonasdan/bootstrap-datetimepicker http://eonasdan.github.io/bootstrap-datetimepicker
+// + typeahead https://github.com/bassjobsen/Bootstrap-3-Typeahead
+//
 //
 //= require app/app.settings
 //= require jquery
 //= require moment.min
 //= require bootstrap.min
 //= require bootstrap-datetimepicker.min
+//= require bootstrap3-typeahead
 //= require_self
+
 (function($, App){
     $.fn.datetimepicker.defaults = {
         pickDate: true,                 //en/disables the date picker

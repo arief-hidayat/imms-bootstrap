@@ -2,6 +2,16 @@ target/
 out/
 .idea/
 plugins/
+/web-app/WEB-INF/classes
+/web-app/plugins
+/test/reports
+/logs
 *.iml
 *.class
 *.log
+*.war
+/*.zip
+/plugin.xml
+/prodDb.*
+*Db.properties
+*Db.script

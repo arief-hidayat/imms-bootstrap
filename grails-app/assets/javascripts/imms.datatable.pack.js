@@ -6,16 +6,7 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
-//= require imms.bootstrap.pack
-//= require imms.datatable.pack
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap
 //= require_self
 
-if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$('#spinner').ajaxStart(function() {
-			$(this).fadeIn();
-		}).ajaxStop(function() {
-			$(this).fadeOut();
-		});
-	})(jQuery);
-}

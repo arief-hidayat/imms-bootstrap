@@ -6,19 +6,7 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
-//= require imms.backbone.pack
-//= require imms.bootstrap.pack
-//= require imms.datatable.pack
+//= require bb/underscore-min
+//= require bb/backbone-min
 //= require_self
 
-if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$('#spinner').ajaxStart(function() {
-			$(this).fadeIn();
-		}).ajaxStop(function() {
-			$(this).fadeOut();
-		});
-	})(jQuery);
-}
-
-window.App = {};

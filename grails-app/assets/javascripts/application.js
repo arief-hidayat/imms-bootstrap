@@ -21,4 +21,5 @@ if (typeof jQuery !== 'undefined') {
 	})(jQuery);
 }
 
-window.App = {};
+
+

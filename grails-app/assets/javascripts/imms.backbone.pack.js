@@ -5,6 +5,7 @@
 // You're free to add application-wide JavaScript to this file, but it's generally better 
 // to create separate JavaScript files as needed.
 //
+//= require app/app.settings
 //= require jquery
 //= require bb/underscore-min
 //= require bb/backbone-min

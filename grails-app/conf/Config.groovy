@@ -1,3 +1,5 @@
+import com.hida.imms.Asset
+
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -127,3 +129,19 @@ jodatime.format.html5 = true
 
 jodatime.format.org.joda.time.LocalDate="yyyy-MM-dd"
 jodatime.format.org.joda.time.LocalDateTime="yyyy-MM-dd HH:mm"
+
+
+imms {
+    datatable {
+        rowclass = [
+                Asset : { Asset item -> (item.status == "In Repair") ? "highlight" : null }
+
+        ]
+        domainkey = [
+                //            Asset : ["firstKey", "secondKey"] // for composite id
+        ]
+        domainfields = [
+                Asset : ["code", "name", "assetType", "status", "locationCd"]
+        ]
+    }
+}

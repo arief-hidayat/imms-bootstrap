@@ -4,16 +4,13 @@ import org.joda.time.LocalDate
 
 class Asset {
 
-    static searchable = {
-        id name: "assetId"
-        code index: 'analyzed'
-        name index: 'analyzed'
-        priority index: 'analyzed'
-        status index: 'analyzed'
-        manufacturer index: 'analyzed'
-        assetGroup index: 'analyzed'
-        assetType index: 'analyzed'
-        locationCd index: 'analyzed'
+    static search = {
+        code index: 'tokenized'
+        name index: 'tokenized'
+        priority index: 'un_tokenized'
+        status index: 'un_tokenized'
+        assetType index: 'un_tokenized'
+        locationCd index: 'un_tokenized'
     }
 
     static mapping = {
@@ -47,8 +44,7 @@ class Asset {
         code(unique: true, blank: false, nullable: false, size: 1..50)
         name(blank: false, nullable: false, size: 1..150)
 //        priority(nullable: false, inList: [ASSET_PRIORITY_CRITICAL, ASSET_PRIORITY_PRODUCTION, ASSET_PRIORITY_NON_PRODUCTION])
-//        status(nullable: false, inList: [STATUS_IN_USE, STATUS_IN_SERVICE, STATUS_IN_REPAIR, STATUS_IN_STORE,
-//                                         STATUS_SCRAPPED])
+//        status(nullable: false, inList: [STATUS_IN_USE, STATUS_IN_SERVICE, STATUS_IN_REPAIR, STATUS_IN_STORE, STATUS_SCRAPPED])
         assetGroup(nullable: true)
         locationCd(nullable: false, validator: { val, obj, errors ->
             if(obj.id && obj.locationCd != val && obj.parentCd) {

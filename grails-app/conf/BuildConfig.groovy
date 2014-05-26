@@ -78,6 +78,9 @@ grails.project.dependency.resolution = {
         compile ":asset-pipeline:1.8.7"
 
 
+        compile ":build-test-data:2.1.2" // for creating demo data.
+
+
 //        compile ":searchable:0.6.7" // seems like compass 2.2.1 not compatible with hibernate4
 //        compile ":joda-time:1.5-SNAPSHOT" // not ready for 2.4. use inline plugin
 

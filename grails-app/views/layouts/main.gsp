@@ -17,8 +17,45 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
-		<g:layoutBody/>
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../" class="navbar-brand">Bootstrap</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../getting-started">Getting started</a>
+                    </li>
+                    <li>
+                        <a href="../css">CSS</a>
+                    </li>
+                    <li>
+                        <a href="../components">Components</a>
+                    </li>
+                    <li>
+                        <a href="../javascript">JavaScript</a>
+                    </li>
+                    <li>
+                        <a href="../customize">Customize</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Expo</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <div id="main-view" class="container">
+            <g:layoutBody/>
+        </div>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 	</body>
